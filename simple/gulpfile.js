@@ -36,7 +36,7 @@ gulp.task('lint', function() {
       }
     }),
     reporter({
-      clearMessages: true,
+      clearAllMessages: true,
     })
   ]))
 });
