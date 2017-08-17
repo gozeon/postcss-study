@@ -1,0 +1,29 @@
+:root {
+  --dark-grayish-green: #868a7b;
+  --very-dark-gray: #333333;
+  --white: #fff;
+  --fullsize: 100%;
+}
+
+$blue:   #056ef0;
+
+@define-mixin fontstyle $size, $color {
+  font-size: $(size)px;
+  font-size: calc($size/16)rem;
+  color: $color;
+}
+
+.social-icon {
+  background: calc(var(--fullsize)/2) no-repeat;
+  background-size: var(--fullsize);
+  color: var(--very-dark-gray);
+  h3 {
+    @mixin fontstyle 20, $blue;
+  }
+
+  @each $media in (twitter, linkedin, youtube) {
+    &.$(media) {
+      background: url('../img/$(media).png');
+    }
+  }
+}

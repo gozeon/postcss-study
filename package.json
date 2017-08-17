@@ -15,10 +15,17 @@
     "autoprefixer": "^6.0.3",
     "cssnano": "^3.2.0",
     "gulp": "^3.9.0",
-    "gulp-postcss": "^6.0.0",
+    "gulp-postcss": "^7.0.0",
     "gulp-rename": "^1.2.2",
     "gulp-sourcemaps": "^1.5.2",
+    "postcss-bem-linter": "^3.0.0",
+    "postcss-calc": "^6.0.0",
     "postcss-cli": "^2.1.0",
+    "postcss-css-variables": "^0.8.0",
+    "postcss-each": "^0.10.0",
+    "postcss-mixins": "^6.0.1",
+    "postcss-nested": "^2.1.2",
+    "postcss-simple-vars": "^4.0.0",
     "stylelint": "^8.0.0"
   }
 }

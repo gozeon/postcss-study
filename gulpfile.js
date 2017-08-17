@@ -9,11 +9,22 @@ var reporter = require('postcss-reporter');
 var cssvariables = require('postcss-css-variables');
 var calc = require("postcss-calc");
 var cssmixins = require('postcss-mixins');
+var eachloop = require('postcss-each');
+var nested = require('postcss-nested');
+var simpleVars = require('postcss-simple-vars');
 
 gulp.task('style', ['lint'], function () {
   return gulp.src('src/*.css')
     .pipe(postcss(
-      [autoprefixer, cssvariables(/*options*/), cssmixins(/*options*/), calc(/*options*/)]
+      [
+        autoprefixer,
+        cssvariables(/*options*/),
+        cssmixins(/*options*/),
+        calc(/*options*/),
+        eachloop(/*options*/),
+        nested(/*options*/),
+        simpleVars()
+      ]
     ))
     .pipe(sourcemaps.init())
     .pipe(sourcemaps.write('map/'))
