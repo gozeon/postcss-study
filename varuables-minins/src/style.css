@@ -5,6 +5,23 @@
   --fullsize: 100%;
 }
 
+@define-mixin fontstyle $size, $color {
+  font-size: $(size)px;
+  font-size: calc($size/16)rem;
+  color: $color;
+}
+
+h3 {
+  @mixin fontstyle 32, #fff;
+  text-transform: uppercase;
+}
+
+.info {
+  h3 {
+    @mixin fontstyle 20, #fff;
+  }
+}
+
 html,
 body {
   width: var(--fullsize);

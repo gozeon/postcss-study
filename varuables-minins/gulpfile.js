@@ -7,10 +7,14 @@ var cssnano = require('cssnano');
 var stylelint = require('stylelint');
 var reporter = require('postcss-reporter');
 var cssvariables = require('postcss-css-variables');
+var calc = require("postcss-calc");
+var cssmixins = require('postcss-mixins');
 
 gulp.task('style', ['lint'], function () {
   return gulp.src('src/*.css')
-    .pipe(postcss([autoprefixer, cssvariables(/*options*/)]))
+    .pipe(postcss(
+      [autoprefixer, cssvariables(/*options*/), cssmixins(/*options*/), calc(/*options*/)]
+    ))
     .pipe(sourcemaps.init())
     .pipe(sourcemaps.write('map/'))
     .pipe(gulp.dest('dist/'));
