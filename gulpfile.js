@@ -12,6 +12,7 @@ var cssmixins = require('postcss-mixins');
 var eachloop = require('postcss-each');
 var nested = require('postcss-nested');
 var simpleVars = require('postcss-simple-vars');
+var customMedia = require('postcss-custom-media');
 
 gulp.task('style', ['lint'], function () {
   return gulp.src('src/*.css')
@@ -23,7 +24,8 @@ gulp.task('style', ['lint'], function () {
         calc(/*options*/),
         eachloop(/*options*/),
         nested(/*options*/),
-        simpleVars()
+        simpleVars(),
+        customMedia()
       ]
     ))
     .pipe(sourcemaps.init())

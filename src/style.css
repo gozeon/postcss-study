@@ -27,3 +27,11 @@ $blue:   #056ef0;
     }
   }
 }
+
+@custom-media --apple-watch (max-device-width: 42mm) and (min-device-width: 38mm);
+
+@media (--apple-watch) {
+  h2 {
+    font-size: .8rem;
+  }
+}
